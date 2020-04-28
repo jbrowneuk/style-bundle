@@ -130,8 +130,8 @@
   --color-loading-spinner-secondary: var(--_color-primary-a-08);
 
   /* Skeleton loader colours */
-  --color-loader-skeleton-primary: var(--_color-neutral-01);
-  --color-loader-skeleton-secondary: var(--_color-neutral-02);
+  --color-loader-skeleton-primary: var(--color-default-background);
+  --color-loader-skeleton-secondary: var(--color-default-border);
 
   /* Tags */
   --color-tag-foreground: var(--_color-neutral-05);
