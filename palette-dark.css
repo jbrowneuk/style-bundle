@@ -77,7 +77,7 @@
   --color-banner-shadow: var(--_color-primary-a-10);
 
   /* Selections */
-  --color-selection-background: var(--_color-primary-b-04);
+  --color-selection-background: #273548;
 
   /* Navigation links */
   --color-navigation-links-foreground: var(--_color-neutral-07);
