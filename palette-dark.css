@@ -61,8 +61,8 @@
   --color-secondary-foreground: hsl(220, 25%, 43%);
 
   /* Links */
-  --color-link-foreground: var(--_color-primary-a-07);
-  --color-link-hover-foreground: var(--_color-primary-a-05);
+  --color-link-foreground: #ffcc44;
+  --color-link-hover-foreground: #ffeecc;
 
   /* Containers */
   --color-container-background: hsl(220, 24%, 17%);
