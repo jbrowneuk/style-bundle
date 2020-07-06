@@ -35,8 +35,9 @@
   --_color-neutral-03: hsl(210, 31%, 80%);
   --_color-neutral-02: hsl(212, 33%, 89%);
   --_color-neutral-01: hsl(210, 36%, 96%);
+}
 
-  /* Exported colour palette */
+:root {
   /* Defaults */
   --color-default-background: var(--_color-neutral-01);
   --color-default-foreground: var(--_color-neutral-07);
@@ -165,4 +166,137 @@
   /* Site-specific - todo: refactor */
   --color-slide-indicator: transparent;
   --color-slide-indicator-hover: var(--_color-primary-a-03);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Defaults */
+    --color-default-background: hsl(221, 24%, 15%);
+    --color-default-foreground: hsl(220, 25%, 79%);
+    --color-default-border: hsl(219, 25%, 13%);
+    --color-default-shadow: rgba(0, 0, 0, 0.2);
+  
+    --color-light-foreground: var(--_color-primary-a-01);
+    --color-light-border: var(--_color-primary-a-05);
+  
+    --color-default-gradient: var(--_color-primary-a-10)
+      linear-gradient(
+        to bottom,
+        var(--_color-primary-a-10),
+        var(--_color-primary-a-07)
+      );
+  
+    /* Destructive actions */
+    --color-destructive-action: var(--_color-primary-b-10);
+    --color-destructive-action-hover: var(--_color-primary-b-09);
+  
+    /* Secondary text */
+    --color-secondary-foreground: hsl(220, 25%, 43%);
+  
+    /* Links */
+    --color-link-foreground: #ffcc44;
+    --color-link-hover-foreground: #ffeecc;
+  
+    /* Containers */
+    --color-container-background: hsl(220, 24%, 17%);
+    --color-container-border: var(--color-default-border);
+  
+    /* Page flair top bar */
+    --color-page-flair: hsl(207, 64%, 64%);
+  
+    /* Banners */
+    --color-banner-background: var(--_color-primary-a-08);
+    --color-banner-highlight: var(--_color-primary-a-06);
+    --color-banner-shadow: var(--_color-primary-a-10);
+  
+    /* Selections */
+    --color-selection-background: #273548;
+  
+    /* Navigation links */
+    --color-navigation-links-foreground: var(--_color-neutral-07);
+    --color-navigation-links-background: transparent;
+    --color-navigation-links-border: transparent;
+    --color-navigation-links-hover-foreground: var(--_color-neutral-10);
+    --color-navigation-links-hover-background: var(--_color-neutral-01);
+    --color-navigation-links-hover-border: var(--_color-neutral-04);
+    --color-navigation-links-active-foreground: var(--_color-neutral-01);
+    --color-navigation-links-active-background: var(--_color-neutral-07);
+    --color-navigation-links-active-border: var(--_color-neutral-07);
+  
+    /* Overlay */
+    --color-overlay-background: hsla(210, 36%, 4%, 0.75);
+    --color-overlay-hover-background: hsla(210, 36%, 4%, 0.9);
+  
+    /* Inputs */
+    --color-input-border: var(--color-container-border);
+    --color-input-border-focus: var(--_color-primary-a-07);
+    --color-input-background: var(--color-default-background);
+    --color-input-background-focus: var(--color-container-background);
+  
+    /* Errors and warnings */
+    --color-error: var(--_color-primary-b-10);
+    --color-warning: var(--_color-primary-b-05);
+  
+    /* Progress bars */
+    --color-progressbar-active: var(--_color-primary-a-10);
+    --color-progressbar-track: var(--_color-neutral-03);
+  
+    /* Buttons */
+    --color-button-primary-background: var(--_color-primary-b-05)
+      linear-gradient(
+        to bottom,
+        var(--_color-primary-b-04),
+        var(--_color-primary-b-06)
+      );
+  
+    --color-button-secondary-background: var(--_color-neutral-03)
+      linear-gradient(
+        to bottom,
+        var(--_color-neutral-02),
+        var(--_color-neutral-04)
+      );
+  
+    --color-button-primary-foreground: var(--_color-primary-b-10);
+  
+    /* Loading spinner */
+    --color-loading-spinner-primary: var(--_color-primary-a-01);
+    --color-loading-spinner-secondary: var(--_color-primary-a-08);
+  
+    /* Skeleton loader colours */
+    --color-loader-skeleton-primary: var(--color-default-background);
+    --color-loader-skeleton-secondary: var(--color-default-border);
+  
+    /* Tags */
+    --color-tag-foreground: var(--_color-neutral-05);
+    --color-tag-background: transparent;
+    --color-tag-border: var(--_color-neutral-05);
+  
+    --color-tag-hover-foreground: var(--_color-primary-a-01);
+    --color-tag-hover-background: var(--_color-primary-a-05);
+    --color-tag-hover-border: var(--_color-primary-a-05);
+  
+    /* Notifications */
+    --color-notification-background: hsl(223, 21%, 22%);
+  
+    /* Blockquotes */
+    --color-blockquote-border: var(--_color-neutral-03);
+    --color-blockquote-icon: var(--_color-neutral-06);
+    --color-blockquote-foreground: var(--_color-primary-a-07);
+  
+    /* Tables */
+    --color-table-row-background: var(--color-container-background);
+    --color-table-row-background-alt: hsl(217, 25%, 18%);
+  
+    /* Dashboard */
+    --color-dashboard-side-background: var(--_color-neutral-08);
+    --color-dashboard-side-foreground: var(--_color-neutral-02);
+    --color-dashboard-side-hover-background: var(--_color-neutral-07);
+    --color-dashboard-side-hover-foreground: var(--_color-neutral-01);
+    --color-dashboard-side-selected-background: var(--_color-neutral-10);
+    --color-dashboard-side-selected-foreground: var(--_color-neutral-01);
+  
+    /* Site-specific - todo: refactor */
+    --color-slide-indicator: transparent;
+    --color-slide-indicator-hover: var(--_color-primary-a-03);
+  }
 }
