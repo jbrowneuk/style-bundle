@@ -1,0 +1,78 @@
+//==============================================================================
+// Color definititions
+//==============================================================================
+// Neutral light palette - tinted blue as it gets darker
+$neutral-light: (
+  "1": hsl(210, 36%, 96%),
+  "2": hsl(212, 33%, 89%),
+  "3": hsl(210, 31%, 80%),
+  "4": hsl(211, 27%, 70%),
+  "5": hsl(209, 23%, 60%),
+  "6": hsl(210, 22%, 49%),
+  "7": hsl(209, 28%, 39%),
+  "8": hsl(209, 34%, 30%),
+  "9": hsl(211, 39%, 23%),
+  "10": hsl(209, 61%, 16%)
+);
+
+// Neutral dark base color
+// The rest are generated automatically
+$neutral-dark-base: #1d232f;
+
+// Primaries
+$primary-bases: (
+  "blue": #0080ff,
+  "red": #ff6633,
+  "yellow": #ffaa00,
+  "green": #33bb77
+);
+
+// Shadows
+$shadow-light: rgba(0, 0, 0, 0.25);
+$shadow-dark: rgba(255, 255, 255, 0.25);
+
+// Variance for primary color generation
+$variance: 15%;
+
+//==============================================================================
+// This section generates the base for the final palette
+//==============================================================================
+:root {
+  @each $key, $value in $primary-bases {
+    /* Primary #{$key} */
+    --_color-primary-#{$key}-1: #{scale-color($value, $lightness: -2 * $variance)};
+    --_color-primary-#{$key}-2: #{scale-color($value, $lightness: -$variance)};
+    --_color-primary-#{$key}-3: #{$value};
+    --_color-primary-#{$key}-4: #{scale-color($value, $lightness: $variance)};
+    --_color-primary-#{$key}-5: #{scale-color($value, $lightness: 2 * $variance)};
+  }
+}
+
+/* Light color mode palette */
+:root {
+  @each $key, $value in $neutral-light {
+    --_color-neutral-#{$key}: #{$value};
+  }
+
+  --_color-shadow: #{$shadow-light};
+  --_color-overlay: #{scale-color(map_get($neutral-light, "1"), $alpha: -20%)};
+
+  /* Other rules go here */
+}
+
+/* Dark color mode palette */
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Builds the dark mode neutral colours from the base
+    // Creates the same number as the light theme palette
+    @for $index from 1 through length($neutral-light) {
+      $amount: ($index - 1) * 10%;
+      --_color-neutral-#{$index}: #{scale-color($neutral-dark-base, $lightness: $amount)};
+    }
+
+    --_color-shadow: #{$shadow-dark};
+    --_color-overlay: #{scale-color($neutral-dark-base, $alpha: -20%)};
+
+    /* Other rules go here */
+  }
+}

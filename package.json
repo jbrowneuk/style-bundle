@@ -8,5 +8,11 @@
     "palette.css"
   ],
   "author": "Jason B <jason@browne.me.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.10"
+  },
+  "scripts": {
+    "generate": "node src/generate.js"
+  }
 }
