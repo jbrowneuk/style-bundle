@@ -1,302 +1,234 @@
 :root {
-  /* Main colour palette - to be used in this file only */
-  /* Primary A */
-  --_color-primary-a-10: hsl(205, 100%, 21%);
-  --_color-primary-a-09: hsl(205, 87%, 29%);
-  --_color-primary-a-08: hsl(205, 82%, 33%);
-  --_color-primary-a-07: hsl(205, 76%, 39%);
-  --_color-primary-a-06: hsl(205, 67%, 45%);
-  --_color-primary-a-05: hsl(205, 65%, 55%);
-  --_color-primary-a-04: hsl(205, 74%, 65%);
-  --_color-primary-a-03: hsl(205, 84%, 74%);
-  --_color-primary-a-02: hsl(205, 97%, 85%);
-  --_color-primary-a-01: hsl(205, 79%, 92%);
-
-  /* Primary B */
-  --_color-primary-b-10: hsl(15, 86%, 30%);
-  --_color-primary-b-09: hsl(22, 82%, 39%);
-  --_color-primary-b-08: hsl(29, 80%, 44%);
-  --_color-primary-b-07: hsl(36, 77%, 49%);
-  --_color-primary-b-06: hsl(42, 87%, 55%);
-  --_color-primary-b-05: hsl(44, 92%, 63%);
-  --_color-primary-b-04: hsl(48, 94%, 68%);
-  --_color-primary-b-03: hsl(48, 95%, 76%);
-  --_color-primary-b-02: hsl(48, 100%, 88%);
-  --_color-primary-b-01: hsl(49, 100%, 96%);
-
-  /* Neutral */
-  --_color-neutral-10: hsl(209, 61%, 16%);
-  --_color-neutral-09: hsl(211, 39%, 23%);
-  --_color-neutral-08: hsl(209, 34%, 30%);
-  --_color-neutral-07: hsl(209, 28%, 39%);
-  --_color-neutral-06: hsl(210, 22%, 49%);
-  --_color-neutral-05: hsl(209, 23%, 60%);
-  --_color-neutral-04: hsl(211, 27%, 70%);
-  --_color-neutral-03: hsl(210, 31%, 80%);
-  --_color-neutral-02: hsl(212, 33%, 89%);
-  --_color-neutral-01: hsl(210, 36%, 96%);
+  /* Primary blue */
+  --_color-primary-blue-1: #005ab3;
+  --_color-primary-blue-2: #006dd9;
+  --_color-primary-blue-3: #0080ff;
+  --_color-primary-blue-4: #2693ff;
+  --_color-primary-blue-5: #4da6ff;
+  /* Primary red */
+  --_color-primary-red-1: #d63600;
+  --_color-primary-red-2: #ff4405;
+  --_color-primary-red-3: #ff6633;
+  --_color-primary-red-4: #ff7d52;
+  --_color-primary-red-5: #ff9470;
+  /* Primary yellow */
+  --_color-primary-yellow-1: #b37700;
+  --_color-primary-yellow-2: #d99100;
+  --_color-primary-yellow-3: #ffaa00;
+  --_color-primary-yellow-4: #ffb726;
+  --_color-primary-yellow-5: #ffc44d;
+  /* Primary green */
+  --_color-primary-green-1: #248353;
+  --_color-primary-green-2: #2b9f65;
+  --_color-primary-green-3: #33bb77;
+  --_color-primary-green-4: #49cd8b;
+  --_color-primary-green-5: #69d6a0;
 }
 
+/* Light color mode palette */
 :root {
-  /* Defaults */
-  --color-default-background: var(--_color-neutral-01);
-  --color-default-foreground: var(--_color-neutral-07);
-  --color-default-border: var(--_color-neutral-02);
-  --color-default-shadow: rgba(0, 0, 0, 0.2);
+  --_color-neutral-1: #f1f5f8;
+  --_color-neutral-2: #dae2ec;
+  --_color-neutral-3: #bcccdc;
+  --_color-neutral-4: #9eb2c7;
+  --_color-neutral-5: #829ab0;
+  --_color-neutral-6: #617d98;
+  --_color-neutral-7: #48647f;
+  --_color-neutral-8: #324d67;
+  --_color-neutral-9: #243a52;
+  --_color-neutral-10: #102a42;
+  --_color-shadow: rgba(0, 0, 0, 0.25);
+  --_color-overlay: rgba(241, 245, 248, 0.8);
 
-  --color-light-foreground: var(--_color-primary-a-01);
-  --color-light-border: var(--_color-primary-a-05);
+  --color-default-background: var(--_color-neutral-2);
+  --color-default-foreground: var(--_color-neutral-7);
+  --color-default-border: var(--_color-neutral-3);
+  --color-default-shadow: var(--_color-shadow);
 
-  --color-default-gradient: var(--_color-primary-a-10)
+  --color-light-foreground: var(--_color-neutral-1);
+  --color-light-border: var(--_color-neutral-2);
+
+  --color-default-gradient: var(--_color-primary-blue-3)
     linear-gradient(
       to bottom,
-      var(--_color-primary-a-10),
-      var(--_color-primary-a-07)
+      var(--_color-primary-blue-2),
+      var(--_color-primary-blue-5)
     );
 
   /* Destructive actions */
-  --color-destructive-action: var(--_color-primary-b-10);
-  --color-destructive-action-hover: var(--_color-primary-b-09);
+  --color-destructive-action: var(--_color-primary-red-3);
+  --color-destructive-action-hover: var(--_color-primary-red-4);
 
   /* Secondary text */
-  --color-secondary-foreground: var(--_color-neutral-05);
+  --color-secondary-foreground: var(--_color-neutral-5);
 
   /* Links */
-  --color-link-foreground: var(--_color-primary-a-07);
-  --color-link-hover-foreground: var(--_color-primary-a-05);
+  --color-link-foreground: var(--_color-primary-blue-3);
+  --color-link-hover-foreground: var(--_color-primary-yellow-1);
 
   /* Containers */
-  --color-container-background: #ffffff;
+  --color-container-background: var(--_color-neutral-1);
   --color-container-border: var(--color-default-border);
 
   /* Page flair top bar */
-  --color-page-flair: var(--_color-primary-a-09);
+  --color-page-flair: var(--_color-primary-blue-5);
 
   /* Banners */
-  --color-banner-background: var(--_color-primary-a-08);
-  --color-banner-highlight: var(--_color-primary-a-06);
-  --color-banner-shadow: var(--_color-primary-a-10);
+  --color-banner-background: var(--_color-primary-blue-3);
+  --color-banner-highlight: var(--_color-primary-blue-5);
+  --color-banner-shadow: var(--_color-primary-blue-1);
 
   /* Selections */
-  --color-selection-background: var(--_color-primary-b-04);
+  --color-selection-background: var(--_color-primary-yellow-1);
 
   /* Navigation links */
-  --color-navigation-links-foreground: var(--_color-neutral-07);
+  --color-navigation-links-foreground: var(--_color-neutral-6);
   --color-navigation-links-background: transparent;
   --color-navigation-links-border: transparent;
-  --color-navigation-links-hover-foreground: var(--_color-neutral-10);
-  --color-navigation-links-hover-background: var(--_color-neutral-01);
-  --color-navigation-links-hover-border: var(--_color-neutral-04);
-  --color-navigation-links-active-foreground: var(--_color-neutral-01);
-  --color-navigation-links-active-background: var(--_color-neutral-07);
-  --color-navigation-links-active-border: var(--_color-neutral-07);
+  --color-navigation-links-hover-foreground: var(--_color-neutral-8);
+  --color-navigation-links-hover-background: var(--_color-neutral-2);
+  --color-navigation-links-hover-border: var(--_color-neutral-6);
+  --color-navigation-links-active-foreground: var(--_color-neutral-1);
+  --color-navigation-links-active-background: var(--_color-neutral-6);
+  --color-navigation-links-active-border: transparent;
 
   /* Overlay */
-  --color-overlay-background: hsla(210, 36%, 96%, 0.75);
-  --color-overlay-hover-background: hsla(210, 36%, 96%, 0.9);
+  --color-overlay-background: var(--_color-overlay);
+  --color-overlay-hover-background: var(--_color-overlay);
 
   /* Inputs */
-  --color-input-border: var(--color-container-border);
-  --color-input-border-focus: var(--_color-primary-a-07);
-  --color-input-background: var(--color-default-background);
-  --color-input-background-focus: var(--color-container-background);
+  --color-input-border: var(--_color-neutral-3);
+  --color-input-foreground: var(--_color-neutral-8);
+  --color-input-background: var(--_color-neutral-1);
+
+  --color-input-border-focus: var(--_color-primary-blue-3);
+  --color-input-foreground-focus: var(--_color-neutral-10);
+  --color-input-background-focus: var(--_color-neutral-1);
 
   /* Errors and warnings */
-  --color-error: var(--_color-primary-b-10);
-  --color-warning: var(--_color-primary-b-05);
+  --color-error: var(--_color-primary-red-2);
+  --color-warning: var(--_color-primary-yellow-3);
 
   /* Progress bars */
-  --color-progressbar-active: var(--_color-primary-a-10);
-  --color-progressbar-track: var(--_color-neutral-03);
+  --color-progressbar-active: var(--_color-primary-blue-2);
+  --color-progressbar-track: var(--_color-neutral-3);
 
   /* Buttons */
-  --color-button-primary-background: var(--_color-primary-b-05)
+  --color-button-primary-background: var(--_color-primary-yellow-3)
     linear-gradient(
       to bottom,
-      var(--_color-primary-b-04),
-      var(--_color-primary-b-06)
+      var(--_color-primary-yellow-4),
+      var(--_color-primary-yellow-2)
     );
+  --color-button-primary-foreground: var(--_color-neutral-10);
 
-  --color-button-secondary-background: var(--_color-neutral-03)
+  --color-button-secondary-background: var(--_color-neutral-2)
     linear-gradient(
       to bottom,
-      var(--_color-neutral-02),
-      var(--_color-neutral-04)
+      var(--_color-neutral-1),
+      var(--_color-neutral-3)
     );
-
-  --color-button-primary-foreground: var(--_color-primary-b-10);
+  --color-button-secondary-foreground: var(--_color-neutral-7);
 
   /* Loading spinner */
-  --color-loading-spinner-primary: var(--_color-primary-a-01);
-  --color-loading-spinner-secondary: var(--_color-primary-a-08);
+  --color-loading-spinner-primary: var(--_color-neutral-1);
+  --color-loading-spinner-secondary: var(--_color-primary-blue-1);
 
   /* Skeleton loader colours */
-  --color-loader-skeleton-primary: var(--_color-neutral-01);
-  --color-loader-skeleton-secondary: var(--_color-neutral-02);
+  --color-loader-skeleton-primary: var(--_color-neutral-2);
+  --color-loader-skeleton-secondary: var(--_color-neutral-3);
 
   /* Tags */
-  --color-tag-foreground: var(--_color-neutral-05);
-  --color-tag-background: transparent;
-  --color-tag-border: var(--_color-neutral-05);
+  --color-tag-foreground: var(--_color-neutral-4);
+  --color-tag-background: var(--_color-neutral-1);
+  --color-tag-border: var(--color-tag-foreground);
 
-  --color-tag-hover-foreground: var(--_color-primary-a-01);
-  --color-tag-hover-background: var(--_color-primary-a-05);
-  --color-tag-hover-border: var(--_color-primary-a-05);
+  --color-tag-hover-foreground: var(--_color-neutral-1);
+  --color-tag-hover-background: var(--_color-primary-blue-3);
+  --color-tag-hover-border: var(--color-tag-hover-background);
 
   /* Notifications */
-  --color-notification-background: var(--_color-primary-a-01);
+  --color-notification-background: var(--_color-neutral-1);
+  --color-notification-foreground: var(--_color-neutral-7);
 
   /* Blockquotes */
-  --color-blockquote-border: var(--_color-neutral-03);
-  --color-blockquote-icon: var(--_color-neutral-06);
-  --color-blockquote-foreground: var(--_color-primary-a-07);
+  --color-blockquote-border: var(--color-default-border);
+  --color-blockquote-icon: var(--color-blockquote-border);
+  --color-blockquote-foreground: inherit;
 
   /* Tables */
-  --color-table-row-background: var(--color-container-background);
-  --color-table-row-background-alt: var(--_color-neutral-01);
+  --color-table-row-background: var(--_color-neutral-1);
+  --color-table-row-background-alt: var(--_color-neutral-2);
 
   /* Dashboard */
-  --color-dashboard-side-background: var(--_color-neutral-08);
-  --color-dashboard-side-foreground: var(--_color-neutral-02);
-  --color-dashboard-side-hover-background: var(--_color-neutral-07);
-  --color-dashboard-side-hover-foreground: var(--_color-neutral-01);
-  --color-dashboard-side-selected-background: var(--_color-neutral-10);
-  --color-dashboard-side-selected-foreground: var(--_color-neutral-01);
+  --color-dashboard-side-background: var(--_color-primary-blue-1);
+  --color-dashboard-side-foreground: var(--_color-neutral-1);
+  --color-dashboard-side-hover-background: var(--_color-primary-blue-4);
+  --color-dashboard-side-hover-foreground: var(--_color-neutral-1);
+  --color-dashboard-side-selected-background: var(--color-container-background);
+  --color-dashboard-side-selected-foreground: var(--color-default-foreground);
 
-  /* Site-specific - todo: refactor */
-  --color-slide-indicator: transparent;
-  --color-slide-indicator-hover: var(--_color-primary-a-03);
+  /* Specific */
+  --color-slide-indicator: var(--_color-primary-blue-3);
+  --color-slide-indicator-hover: var(--_color-primary-blue-5);
 }
 
+/* Dark color mode palette */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Defaults */
-    --color-default-background: hsl(221, 24%, 15%);
-    --color-default-foreground: hsl(220, 25%, 79%);
-    --color-default-border: hsl(219, 25%, 13%);
-    --color-default-shadow: rgba(0, 0, 0, 0.2);
-  
-    --color-light-foreground: var(--_color-primary-a-01);
-    --color-light-border: var(--_color-primary-a-05);
-  
-    --color-default-gradient: var(--_color-primary-a-10)
+    --_color-neutral-1: #1d232f;
+    --_color-neutral-2: #2e374a;
+    --_color-neutral-3: #3e4b65;
+    --_color-neutral-4: #4f5f80;
+    --_color-neutral-5: #5f739a;
+    --_color-neutral-6: #798aac;
+    --_color-neutral-7: #94a1bd;
+    --_color-neutral-8: #aeb9cd;
+    --_color-neutral-9: #c9d0de;
+    --_color-neutral-10: #e4e8ee;
+    --_color-shadow: rgba(0, 0, 0, 0.5);
+    --_color-overlay: rgba(29, 35, 47, 0.8);
+
+    --color-default-gradient: var(--_color-primary-blue-2)
+    linear-gradient(
+      to bottom,
+      var(--_color-primary-blue-1),
+      var(--_color-primary-blue-3)
+    );
+    --color-destructive-action: var(--_color-primary-red-1);
+    --color-destructive-action-hover: var(--_color-primary-red-2);
+    --color-light-foreground: var(--_color-neutral-10);
+    --color-link-foreground: var(--_color-primary-yellow-1);
+    --color-link-hover-foreground: var(--_color-primary-yellow-3);
+    --color-button-primary-background: var(--_color-primary-yellow-2)
       linear-gradient(
         to bottom,
-        var(--_color-primary-a-10),
-        var(--_color-primary-a-07)
+        var(--_color-primary-yellow-3),
+        var(--_color-primary-yellow-1)
       );
-  
-    /* Destructive actions */
-    --color-destructive-action: var(--_color-primary-b-10);
-    --color-destructive-action-hover: var(--_color-primary-b-09);
-  
-    /* Secondary text */
-    --color-secondary-foreground: hsl(220, 25%, 43%);
-  
-    /* Links */
-    --color-link-foreground: #ffcc44;
-    --color-link-hover-foreground: #ffeecc;
-  
-    /* Containers */
-    --color-container-background: hsl(220, 24%, 17%);
-    --color-container-border: var(--color-default-border);
-  
-    /* Page flair top bar */
-    --color-page-flair: hsl(207, 64%, 64%);
-  
-    /* Banners */
-    --color-banner-background: var(--_color-primary-a-08);
-    --color-banner-highlight: var(--_color-primary-a-06);
-    --color-banner-shadow: var(--_color-primary-a-10);
-  
-    /* Selections */
-    --color-selection-background: #273548;
-  
-    /* Navigation links */
-    --color-navigation-links-foreground: var(--_color-neutral-07);
-    --color-navigation-links-background: transparent;
-    --color-navigation-links-border: transparent;
-    --color-navigation-links-hover-foreground: var(--_color-neutral-10);
-    --color-navigation-links-hover-background: var(--_color-neutral-01);
-    --color-navigation-links-hover-border: var(--_color-neutral-04);
-    --color-navigation-links-active-foreground: var(--_color-neutral-01);
-    --color-navigation-links-active-background: var(--_color-neutral-07);
-    --color-navigation-links-active-border: var(--_color-neutral-07);
-  
-    /* Overlay */
-    --color-overlay-background: hsla(210, 36%, 4%, 0.75);
-    --color-overlay-hover-background: hsla(210, 36%, 4%, 0.9);
-  
-    /* Inputs */
-    --color-input-border: var(--color-container-border);
-    --color-input-border-focus: var(--_color-primary-a-07);
-    --color-input-background: var(--color-default-background);
-    --color-input-background-focus: var(--color-container-background);
-  
-    /* Errors and warnings */
-    --color-error: var(--_color-primary-b-10);
-    --color-warning: var(--_color-primary-b-05);
-  
-    /* Progress bars */
-    --color-progressbar-active: var(--_color-primary-a-10);
-    --color-progressbar-track: var(--_color-neutral-03);
-  
-    /* Buttons */
-    --color-button-primary-background: var(--_color-primary-b-05)
+    --color-button-primary-foreground: var(--_color-neutral-1);
+    --color-button-secondary-background: var(--_color-neutral-2)
       linear-gradient(
         to bottom,
-        var(--_color-primary-b-04),
-        var(--_color-primary-b-06)
+        var(--_color-neutral-3),
+        var(--_color-neutral-2)
       );
-  
-    --color-button-secondary-background: var(--_color-neutral-03)
-      linear-gradient(
-        to bottom,
-        var(--_color-neutral-02),
-        var(--_color-neutral-04)
-      );
-  
-    --color-button-primary-foreground: var(--_color-primary-b-10);
-  
-    /* Loading spinner */
-    --color-loading-spinner-primary: var(--_color-primary-a-01);
-    --color-loading-spinner-secondary: var(--_color-primary-a-08);
-  
-    /* Skeleton loader colours */
-    --color-loader-skeleton-primary: var(--color-default-background);
-    --color-loader-skeleton-secondary: var(--color-default-border);
-  
-    /* Tags */
-    --color-tag-foreground: var(--_color-neutral-05);
-    --color-tag-background: transparent;
-    --color-tag-border: var(--_color-neutral-05);
-  
-    --color-tag-hover-foreground: var(--_color-primary-a-01);
-    --color-tag-hover-background: var(--_color-primary-a-05);
-    --color-tag-hover-border: var(--_color-primary-a-05);
-  
-    /* Notifications */
-    --color-notification-background: hsl(223, 21%, 22%);
-  
-    /* Blockquotes */
-    --color-blockquote-border: var(--_color-neutral-03);
-    --color-blockquote-icon: var(--_color-neutral-06);
-    --color-blockquote-foreground: var(--_color-primary-a-07);
-  
-    /* Tables */
-    --color-table-row-background: var(--color-container-background);
-    --color-table-row-background-alt: hsl(217, 25%, 18%);
-  
-    /* Dashboard */
-    --color-dashboard-side-background: var(--_color-neutral-08);
-    --color-dashboard-side-foreground: var(--_color-neutral-02);
-    --color-dashboard-side-hover-background: var(--_color-neutral-07);
-    --color-dashboard-side-hover-foreground: var(--_color-neutral-01);
-    --color-dashboard-side-selected-background: var(--_color-neutral-10);
-    --color-dashboard-side-selected-foreground: var(--_color-neutral-01);
-  
-    /* Site-specific - todo: refactor */
-    --color-slide-indicator: transparent;
-    --color-slide-indicator-hover: var(--_color-primary-a-03);
+    --color-button-secondary-foreground: var(--_color-neutral-7);
+    --color-banner-background: var(--_color-primary-blue-1);
+    --color-banner-highlight: var(--_color-neutral-5);
+    --color-banner-shadow: var(--_color-neutral-1);
+    --color-loading-spinner-primary: var(--color-default-background);
+    --color-loading-spinner-secondary: var(--_color-neutral-7);
+    --color-progressbar-active: var(--_color-primary-blue-3);
+    --color-tag-hover-background: var(--color-link-foreground);
+    --color-input-foreground: var(--color-default-foreground);
+    --color-input-background: var(--_color-neutral-2);
+    --color-input-foreground-focus: var(--color-default-foreground);
+    --color-input-background-focus: var(--_color-neutral-3);
+    --color-dashboard-side-background: var(--_color-neutral-3);
+    --color-dashboard-side-foreground: var(--_color-neutral-8);
+    --color-dashboard-side-hover-background: var(--_color-neutral-2);
+    --color-dashboard-side-hover-foreground: var(--_color-neutral-9);
+    --color-dashboard-side-selected-foreground: var(--_color-neutral-10);
   }
 }
