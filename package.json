@@ -1,6 +1,6 @@
 {
   "name": "@jbrowneuk/style-bundle",
-  "version": "2.1.0",
+  "version": "3.0.0-alpha.1",
   "description": "Global style files for Jason B’s Portfolio",
   "main": "palette.css",
   "files": [
@@ -10,7 +10,7 @@
   "author": "Jason B <jason@browne.me.uk>",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.26.10"
+    "sass": "^1.70.0"
   },
   "scripts": {
     "generate": "node src/generate.js"
