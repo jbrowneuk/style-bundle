@@ -1,25 +1,40 @@
-/**
- * Simple SASS compiler to generate the colour palette.
- * Run `npm run generate` and pull colour variables out of `src/palette.css`
- */
-const sass = require('sass');
-const fs = require('fs');
-const path = require('path');
+"use strict";
 
-const scssFilename = path.resolve(__dirname, 'colors.scss');
-const cssFilename = path.resolve(__dirname, 'colors.css');
+const fs = require("fs");
+const path = require("path");
+const sass = require("sass");
 
-console.log('Reading', scssFilename);
-const result = sass.renderSync({file: scssFilename});
-if (!result) {
-  return console.error('Error');
-}
+const scssFiles = ["palette", "styles"];
 
-console.log('Writing to', cssFilename);
-fs.writeFile(cssFilename, result.css, 'utf-8', (err) => {
-  if (err) {
+/** Generates the CSS output by rendering the SCSS source */
+function generateCSS(inputFilename, outputFilename) {
+  console.log("Rendering", inputFilename);
+  const options = {
+    loadPaths: [__dirname],
+    style: "compressed"
+  };
+
+  const result = sass.compile(inputFilename, options);
+  if (!result) {
+    return console.error("Rendering failed");
+  }
+
+  try {
+    console.log("Writing to", outputFilename);
+    fs.writeFileSync(outputFilename, result.css, { encoding: "utf-8" });
+  } catch (err) {
     return console.error(err);
   }
 
-  console.log('Written');
+  console.log("Done");
+}
+
+const outputDir = path.resolve(__dirname, "..");
+scssFiles.forEach((scssFile) => {
+  console.log("Rendering CSS for", scssFile, "stylesheet");
+  const fileSrc = path.resolve(__dirname, scssFile + ".scss");
+  const fileDest = path.resolve(outputDir, scssFile + ".css");
+  generateCSS(fileSrc, fileDest);
 });
+
+console.log("Generation complete");
