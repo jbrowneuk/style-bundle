@@ -1,0 +1,32 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "custom-property-pattern": [
+      "^([a-z][a-z0-9]*)([-_][a-z0-9]+)*$",
+      {
+        "message": "Expected custom property name to be in the format component-name_property-type_item-name"
+      }
+    ],
+    "color-hex-length": "long",
+    "font-family-name-quotes": null,
+    "max-nesting-depth": 3,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": ["/^jblog-/", "/deep/"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["use", "mixin", "include", "if", "for", "each"]
+      }
+    ]
+  }
+}
