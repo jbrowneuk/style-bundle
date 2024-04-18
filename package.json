@@ -1,6 +1,6 @@
 {
   "name": "@jbrowneuk/style-bundle",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Global style files for Jason B’s Portfolio",
   "main": "palette.css",
   "files": [
@@ -10,9 +10,12 @@
   "author": "Jason B <jason@browne.me.uk>",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard-scss": "^13.1.0"
   },
   "scripts": {
-    "generate": "node src/generate.js"
+    "generate": "node src/generate.js",
+    "lint": "stylelint \"src/**/*.scss\""
   }
 }

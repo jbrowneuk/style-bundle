@@ -1,0 +1,35 @@
+// =============================================================================
+// Color definititions
+// =============================================================================
+// Neutral light palette - tinted blue as it gets darker
+$neutral-light: (
+  "1": hsl(210deg 36% 96%),
+  "2": hsl(212deg 33% 89%),
+  "3": hsl(210deg 31% 80%),
+  "4": hsl(211deg 27% 70%),
+  "5": hsl(209deg 23% 60%),
+  "6": hsl(210deg 22% 49%),
+  "7": hsl(209deg 28% 39%),
+  "8": hsl(209deg 34% 30%),
+  "9": hsl(211deg 39% 23%),
+  "10": hsl(209deg 61% 16%)
+);
+
+// Neutral dark base color
+// The rest are generated automatically
+$neutral-dark-base: #1d232f;
+
+// Primaries
+$primary-bases: (
+  "blue": #0080ff,
+  "red": #ff6633,
+  "yellow": #ffaa00,
+  "green": #33bb77
+);
+
+// Shadows
+$shadow-light: rgb(0 0 0 / 25%);
+$shadow-dark: rgb(255 255 255 / 25%);
+
+// Variance for primary color generation
+$variance: 15%;

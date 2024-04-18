@@ -1,0 +1,38 @@
+.spritesheet {
+  display: none;
+}
+
+.secondary-text {
+  color: var(--page_color_foreground-secondary);
+}
+
+.skeleton-loader-background {
+  background-color: var(--skeleton-loader_background-a);
+  background-image: linear-gradient(
+    to left,
+    var(--skeleton-loader_background-a),
+    var(--skeleton-loader_background-b)
+  );
+  background-size: 400% 400%;
+  animation: background-back-and-forth 2s ease infinite;
+}
+
+.loading-area {
+  min-height: 50vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sr-only {
+  position: relative;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  padding: 0;
+  border: none;
+}
