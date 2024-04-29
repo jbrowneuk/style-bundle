@@ -1,6 +1,7 @@
 /* stylelint-disable custom-property-pattern -- interpolation requires braces */
 @use 'sass:color';
 @use 'sass:map';
+@use 'sass:string';
 @import 'palette/colors';
 
 // Globals
@@ -32,7 +33,7 @@ $color-names: (
   'page-footer_color_background': ($light: 'neutral-9'),
   'page-footer_color_foreground': ($light: 'neutral-4'),
   'page-footer_color_icon': ($light: 'neutral-3'),
-  'page-footer_color_background-overlay': ($light: ' 0.2'),
+  'page-footer_color_background-overlay': ($light: 'rgb(0 0 0 / 20%)'), // Hard-coded color value
   'page-footer_color_foreground-link': ($light: 'neutral-4'),
   'page-footer_color_foreground-link-hover': ($light: 'neutral-6'),
 
@@ -116,8 +117,12 @@ $color-names: (
     $prop-value: transparent;
     $map-value: map.get($value, $variant);
 
-    @if $map-value and $map-value != $transparent {
-      $prop-value: var(--_color-#{$map-value});
+    @if $map-value {
+      @if $map-value == $transparent or str-index($map-value, 'rgb(') {
+        $prop-value: $map-value;
+      } @else {
+        $prop-value: var(--_color-#{$map-value});
+      }
     }
 
     --#{$prop}: #{$prop-value};
