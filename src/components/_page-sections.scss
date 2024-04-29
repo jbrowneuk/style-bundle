@@ -26,6 +26,14 @@
 .page-section.background-dark {
   background: var(--page-section_color_background-dark);
   color: var(--page-section_color_foreground-dark);
+
+  a {
+    color: var(--link-light_color_default);
+  }
+
+  a:hover, a:focus {
+    color: var(--link-light_color_hover);
+  }
 }
 
 .page-section h1,
