@@ -1,11 +1,12 @@
 {
   "name": "@jbrowneuk/style-bundle",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Global style files for Jason B’s Portfolio",
-  "main": "palette.css",
+  "main": "styles.css",
   "files": [
     "LICENSE",
-    "palette.css"
+    "palette.css",
+    "styles.css"
   ],
   "author": "Jason B <jason@browne.me.uk>",
   "license": "MIT",
