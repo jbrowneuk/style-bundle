@@ -45,18 +45,11 @@
   }
 }
 
-#page-header,
-#sticky-menu {
+#page-header {
   background: var(--page-header_color_background);
   color: var(--page-header_color_foreground);
-}
 
-#sticky-menu {
-  position: fixed;
-  z-index: 10;
-  width: 100vw;
-
-  /* stylelint-disable-next-line no-descending-specificity -- stylelint continues to fail if this rule is moved above #nav-links */
+  /* stylelint-disable-next-line no-descending-specificity -- stylelint also fails if this rule block is moved above #nav-links */
   a {
     color: var(--navigation-link_color_foreground);
     transition: color 0.2s, background-color 0.2s, border-color 0.2s,
