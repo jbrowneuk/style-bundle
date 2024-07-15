@@ -50,6 +50,12 @@
   }
 }
 
+#page-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 #page-footer {
   background: var(--page-footer_color_background);
   color: var(--page-footer_color_foreground);

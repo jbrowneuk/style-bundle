@@ -2,6 +2,7 @@
 @use 'sass:color';
 @use 'sass:map';
 @use 'sass:string';
+@use 'sass:list';
 @import 'palette/colors';
 
 // Globals
@@ -118,7 +119,7 @@ $color-names: (
     $map-value: map.get($value, $variant);
 
     @if $map-value {
-      @if $map-value == $transparent or str-index($map-value, 'rgb(') {
+      @if $map-value == $transparent or string.index($map-value, 'rgb(') {
         $prop-value: $map-value;
       } @else {
         $prop-value: var(--_color-#{$map-value});
@@ -160,7 +161,7 @@ $color-names: (
   :root {
     // Builds the dark mode neutral colours from the base
     // Creates the same number as the light theme palette
-    @for $index from 1 through length($neutral-light) {
+    @for $index from 1 through list.length($neutral-light) {
       $amount: ($index - 1) * 10%;
 
       --_color-neutral-#{$index}: #{color.scale($neutral-dark-base, $lightness: $amount)};
