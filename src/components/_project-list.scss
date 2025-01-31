@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .project-list-section .text-area {
   grid-column: 1 / span 8;
@@ -31,7 +31,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-md) {
+@media screen and (max-width: variables.$breakpoint-md) {
   .project-list-section .text-area {
     grid-column: 1 / -1;
   }

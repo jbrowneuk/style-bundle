@@ -3,7 +3,7 @@
 @use 'sass:map';
 @use 'sass:string';
 @use 'sass:list';
-@import 'palette/colors';
+@use 'palette/colors';
 
 // Globals
 $transparent: 'transparent';
@@ -135,41 +135,21 @@ $color-names: (
 // =============================================================================
 :root {
   /* Primary colours */
-  @each $key, $value in $primary-bases {
-    --_color-primary-#{$key}-1: #{color.scale($value, $lightness: -2 * $variance)};
-    --_color-primary-#{$key}-2: #{color.scale($value, $lightness: -$variance)};
+  @each $key, $value in colors.$primary-bases {
+    --_color-primary-#{$key}-1: #{color.scale($value, $lightness: -2 * colors.$variance)};
+    --_color-primary-#{$key}-2: #{color.scale($value, $lightness: - (colors.$variance))};
     --_color-primary-#{$key}-3: #{$value};
-    --_color-primary-#{$key}-4: #{color.scale($value, $lightness: $variance)};
-    --_color-primary-#{$key}-5: #{color.scale($value, $lightness: 2 * $variance)};
+    --_color-primary-#{$key}-4: #{color.scale($value, $lightness: colors.$variance)};
+    --_color-primary-#{$key}-5: #{color.scale($value, $lightness: 2 * colors.$variance)};
   }
 
   /* Light mode colours */
-  @each $key, $value in $neutral-light {
+  @each $key, $value in colors.$neutral-light {
     --_color-neutral-#{$key}: #{$value};
   }
 
-  --_color-shadow: #{$shadow-light};
-  --_color-overlay: #{color.scale(map.get($neutral-light, '1'), $alpha: -20%)};
+  --_color-shadow: #{colors.$shadow-light};
+  --_color-overlay: #{color.scale(map.get(colors.$neutral-light, '1'), $alpha: -20%)};
 
   @include generate-app-palette($light);
-}
-
-// =============================================================================
-// Dark color mode palette
-// =============================================================================
-@media (prefers-color-scheme: dark) {
-  :root {
-    // Builds the dark mode neutral colours from the base
-    // Creates the same number as the light theme palette
-    @for $index from 1 through list.length($neutral-light) {
-      $amount: ($index - 1) * 10%;
-
-      --_color-neutral-#{$index}: #{color.scale($neutral-dark-base, $lightness: $amount)};
-    }
-
-    --_color-shadow: #{$shadow-dark};
-    --_color-overlay: #{color.scale($neutral-dark-base, $alpha: -20%)};
-
-    @include generate-app-palette($light);
-  }
 }

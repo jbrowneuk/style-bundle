@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 /* Post styles (shared with journal and gallery */
 :root {
@@ -109,7 +109,7 @@
 }
 
 /* Mobile devices */
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: variables.$breakpoint-sm) {
   .post {
     --post-content_margin_top: 20px;
   }

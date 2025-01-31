@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 // --------------------------------------------------------
 // Fixed container for grid system
@@ -12,28 +12,28 @@
 }
 
 /* sm */
-@media screen and (min-width: $breakpoint-sm) {
+@media screen and (min-width: variables.$breakpoint-sm) {
   .container {
     width: var(--width-container-sm);
   }
 }
 
 /* md */
-@media screen and (min-width: $breakpoint-md) {
+@media screen and (min-width: variables.$breakpoint-md) {
   .container {
     width: var(--width-container-md);
   }
 }
 
 /* lg */
-@media screen and (min-width: $breakpoint-lg) {
+@media screen and (min-width: variables.$breakpoint-lg) {
   .container {
     width: var(--width-container-lg);
   }
 }
 
 /* xl */
-@media screen and (min-width: $breakpoint-xl) {
+@media screen and (min-width: variables.$breakpoint-xl) {
   .container {
     width: var(--width-container-xl);
   }
