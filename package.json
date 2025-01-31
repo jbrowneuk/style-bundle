@@ -11,9 +11,9 @@
   "author": "Jason B <jason@browne.me.uk>",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.70.0",
-    "stylelint": "^16.3.1",
-    "stylelint-config-standard-scss": "^13.1.0"
+    "sass": "^1.83.4",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard-scss": "^14.0.0"
   },
   "scripts": {
     "generate": "node src/generate.js",
