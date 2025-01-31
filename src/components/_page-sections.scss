@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 :root {
   --page-section_padding_top: 60px;
@@ -8,7 +8,7 @@
 }
 
 /* Mobile devices */
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: variables.$breakpoint-sm) {
   :root {
     --page-section_padding_top: 30px;
     --page-section_font-size_heading: 35px;

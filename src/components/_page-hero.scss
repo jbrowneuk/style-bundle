@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 :root {
   --hero_font-size_heading: 56px;
@@ -42,7 +42,7 @@
   }
 }
 
-@media screen and (max-width: ($breakpoint-sm - 1)) {
+@media screen and (max-width: (variables.$breakpoint-sm - 1)) {
   .top-hero-section {
     .image {
       display: none;
