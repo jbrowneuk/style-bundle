@@ -1,0 +1,26 @@
+.breadcrumbs {
+  background: var(--page-section_color_background-alternate);
+  padding: 1em;
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: .5em;
+  }
+
+  ol li {
+    display: flex;
+    gap: inherit;
+    align-items: center;
+    line-height: 1;
+  }
+
+  li + li::before {
+    // Ties this style to line awesome icons
+    font-family: 'Line Awesome Free', sans-serif;
+    font-weight: 900;
+    content: '';
+  }
+}
