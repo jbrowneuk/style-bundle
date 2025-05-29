@@ -1,5 +1,6 @@
 a {
   color: var(--link_color_default);
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   &:hover {
     color: var(--link_color_hover);
