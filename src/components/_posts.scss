@@ -20,6 +20,8 @@
       min-width: var(--calendar_dimension);
       min-height: var(--calendar_dimension);
       margin-left: 0.5em;
+      overflow: hidden;
+      border-radius: var(--generic-subtle_border_radius);
       background: var(--calendar_color_background);
       box-shadow: 0 2px 4px var(--generic_color_shadow);
     }
@@ -82,12 +84,14 @@
   }
 
   // Styles for items in the post area
-  // *.posted is for backward compatibility
-  img.posted,
-  video.posted,
   .responsive {
     max-width: 100%;
     height: auto;
+  }
+
+  img.responsive,
+  video.responsive {
+    border-radius: var(--generic-subtle_border_radius);
   }
 
   figure figcaption {
