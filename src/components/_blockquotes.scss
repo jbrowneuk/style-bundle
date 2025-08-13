@@ -1,0 +1,39 @@
+blockquote {
+  overflow: hidden;
+  position: relative;
+  padding: 1px 3em;
+  border-left: 4px solid var(--blockquote_color_border);
+  border-radius: var(--generic-subtle_border_radius);
+  background: var(--blockquote_color_background);
+
+  &::before,
+  &::after {
+    position: absolute;
+    line-height: 1;
+    color: var(--blockquote_color_accessory);
+  }
+
+  &::before {
+    content: open-quote;
+    font-size: 4em;
+    left: 10px;
+    top: 10px;
+  }
+
+  &::after {
+    content: close-quote;
+    font-size: 160px;
+    right: 0;
+    bottom: -50px;
+    line-height: 100px;
+    opacity: 0.25;
+  }
+
+  cite {
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    font-style: italic;
+    color: var(--page_color_foreground-secondary);
+  }
+}

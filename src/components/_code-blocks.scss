@@ -1,5 +1,5 @@
 pre, code {
-  border-radius: 5px;
+  border-radius: var(--generic-subtle_border_radius);
   font-size: inherit;
   color: var(--page_color_foreground-secondary);
   border: 1px solid var(--page_color_foreground-secondary);
