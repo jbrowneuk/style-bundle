@@ -1,6 +1,6 @@
 {
   "name": "@jbrowneuk/style-bundle",
-  "version": "3.5.2",
+  "version": "3.5.3",
   "description": "Global style files for Jason B’s Portfolio",
   "main": "styles.css",
   "files": [

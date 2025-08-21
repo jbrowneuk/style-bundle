@@ -1,21 +1,24 @@
-// Core
+// Core - styles for global HTML elements
 @use 'core/animations';
+@use 'core/blockquotes';
+@use 'core/buttons';
+@use 'core/code-blocks';
 @use 'core/dimensions';
+@use 'core/figures';
 @use 'core/headings';
+@use 'core/horizontal-rules';
+@use 'core/links';
 @use 'core/page-base';
 @use 'core/responsive';
 @use 'core/selection';
 @use 'core/superglobals';
+@use 'core/tables';
 
-// Components
-@use 'components/blockquotes';
+// Components - styles for custom components
 @use 'components/breadcrumbs';
-@use 'components/buttons';
-@use 'components/code-blocks';
 @use 'components/fancy-headings';
 @use 'components/gallery';
 @use 'components/grid';
-@use 'components/links';
 @use 'components/load-spinner';
 @use 'components/nav-framework';
 @use 'components/page-hero';
@@ -26,5 +29,4 @@
 @use 'components/posts';
 @use 'components/project-list';
 @use 'components/slideshow';
-@use 'components/tables';
 @use 'components/tag';
