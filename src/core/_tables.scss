@@ -5,7 +5,7 @@ table {
   background: var(--table_color_background);
   box-shadow: 0 0 0 1px var(--table_color_background-title);
 
-  & > td, & > th {
+  td, th {
     padding: 4px 8px;
   }
 
