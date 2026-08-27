@@ -36,13 +36,9 @@
   }
 }
 
-.page-section h1,
-.page-section h2 {
-  margin: 0;
-  padding: 0;
-}
-
-.page-section h1 {
+.page-section header h2 {
   font-size: var(--page-section_font-size_heading);
   font-weight: var(--page-section_font-weight_heading);
+  margin: 0;
+  padding: 0;
 }
