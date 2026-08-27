@@ -2,7 +2,7 @@
   background: var(--page-section_color_background-alternate);
   padding: 1em;
 
-  ol {
+  menu {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -10,7 +10,7 @@
     gap: .5em;
   }
 
-  ol li {
+  menu li {
     display: flex;
     gap: inherit;
     align-items: center;
