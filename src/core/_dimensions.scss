@@ -1,3 +1,5 @@
+@use 'variables';
+
 :root {
   /* Grid */
   --grid-columns: 12;
@@ -8,10 +10,10 @@
   );
 
   // Breakpoints
-  --breakpoint-sm: $breakpoint-sm;
-  --breakpoint-md: $breakpoint-md;
-  --breakpoint-lg: $breakpoint-lg;
-  --breakpoint-xl: $breakpoint-xl;
+  --breakpoint-sm: #{variables.$breakpoint-sm};
+  --breakpoint-md: #{variables.$breakpoint-md};
+  --breakpoint-lg: #{variables.$breakpoint-lg};
+  --breakpoint-xl: #{variables.$breakpoint-xl};
 
   // Containers
   --width-container-sm: 540px;

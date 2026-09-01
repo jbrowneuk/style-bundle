@@ -8,20 +8,7 @@
       }
     ],
     "color-hex-length": "long",
-    "font-family-name-quotes": null,
     "max-nesting-depth": 3,
-    "selector-type-no-unknown": [
-      true,
-      {
-        "ignoreTypes": ["/^jblog-/", "/deep/"]
-      }
-    ],
-    "selector-pseudo-element-no-unknown": [
-      true,
-      {
-        "ignorePseudoElements": ["ng-deep"]
-      }
-    ],
     "at-rule-no-unknown": [
       true,
       {

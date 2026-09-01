@@ -39,6 +39,7 @@
 
   .home-link .link-text {
     font-size: 24px;
+    font-weight: inherit;
     margin: 0 0.5em;
   }
 
@@ -98,13 +99,17 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  header {
+  h2,
+  menu {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
     font-size: var(--page-footer_font-size_heading);
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
+  menu {
     list-style: none;
   }
 
