@@ -158,9 +158,9 @@ $color-names: (
 }
 
 // =============================================================================
-// Default (light mode) color mode palette
+// Light and dark palette application
 // =============================================================================
-:root {
+@mixin apply-light-palette {
   color-scheme: light;
 
   @include palette-primitives(
@@ -171,18 +171,40 @@ $color-names: (
   @include generate-app-palette($light);
 }
 
+@mixin apply-dark-palette {
+  color-scheme: dark;
+
+  @include palette-primitives(
+    colors.$neutral-dark,
+    colors.$shadow-dark,
+    map.get(colors.$neutral-dark, '1')
+  );
+  @include generate-app-palette($dark);
+}
+
+// =============================================================================
+// Default (light mode) color mode palette
+// =============================================================================
+:root {
+  @include apply-light-palette;
+}
+
 // =============================================================================
 // Dark mode palette (system preference)
 // =============================================================================
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    @include palette-primitives(
-      colors.$neutral-dark,
-      colors.$shadow-dark,
-      map.get(colors.$neutral-dark, '1')
-    );
-    @include generate-app-palette($dark);
+  :root:not([data-theme='light']) {
+    @include apply-dark-palette;
   }
+}
+
+// =============================================================================
+// Manual theme overrides
+// =============================================================================
+:root[data-theme='dark'] {
+  @include apply-dark-palette;
+}
+
+:root[data-theme='light'] {
+  @include apply-light-palette;
 }
