@@ -1,5 +1,5 @@
 // =============================================================================
-// Color definititions
+// Color definitions
 // =============================================================================
 // Neutral light palette - tinted blue as it gets darker
 $neutral-light: (
@@ -15,9 +15,20 @@ $neutral-light: (
   "10": hsl(209deg 61% 16%)
 );
 
-// Neutral dark base color
-// The rest are generated automatically
+// Neutral dark palette - blue tint; step 1 is page background, step 10 is emphasis text
 $neutral-dark-base: #1d232f;
+$neutral-dark: (
+  "1": $neutral-dark-base,
+  "2": hsl(218deg 22% 19%),
+  "3": hsl(217deg 21% 24%),
+  "4": hsl(216deg 20% 30%),
+  "5": hsl(215deg 18% 40%),
+  "6": hsl(214deg 16% 52%),
+  "7": hsl(212deg 18% 62%),
+  "8": hsl(211deg 20% 72%),
+  "9": hsl(210deg 22% 85%),
+  "10": hsl(210deg 24% 93%)
+);
 
 // Primaries
 $primary-bases: (
