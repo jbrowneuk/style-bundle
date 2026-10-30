@@ -3,33 +3,94 @@ table {
   border-collapse: collapse;
   border-radius: var(--generic-subtle_border_radius);
   background: var(--table_color_background);
-  box-shadow: 0 0 0 1px var(--table_color_background-title);
+  box-shadow: 0 0 0 1px var(--table-header_color_background), 0 2px 4px var(--generic_color_shadow);
+  width: 100%;
+  overflow: hidden;
 
   td, th {
-    padding: 4px 8px;
+    padding: 10px 12px;
   }
 
-  & > thead > tr > th {
-    background: var(--table_color_background-title);
-    color: var(--table_color_foreground-title);
+  th {
+    text-align: left;
   }
 
-  // Fix table row colour overflow without affecting potential position:sticky on table headers
-  & > tbody > tr:nth-child(even) > td,
-  & > tbody > tr:nth-child(even) > th {
-    background-color: var(--table_color_background-alt);
+  th:not([scope="row"]),
+  tfoot {
+    font-size: small;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-weight: normal;
   }
 
-  & > tbody > tr:last-child > td:first-child {
-    border-bottom-left-radius: var(--generic-subtle_border_radius);
+  th[scope="row"],
+  td {
+    vertical-align: top;
   }
 
-  & > tbody > tr:last-child > td:last-child {
+  // Table header
+  thead tr th {
+    background: var(--table-header_color_background);
+    color: var(--table-header_color_foreground);
+  }
+
+  // Sortable appearance for table header
+  thead.sortable .sort-header a {
+    color: var(--table-title_color_foreground);
+    text-decoration: none;
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin: -10px -12px;
+    transition: box-shadow .2s, background-color .2s;
+  }
+
+  thead.sortable .sort-header a:hover {
+    box-shadow: inset 0 4px 16px var(--table-sortable-header_color_inset-shadow);
+    background-color: var(--table-sortable-header_color_background);
+  }
+
+  thead.sortable .sort-header a:hover .column-name {
+    text-decoration: underline;
+  }
+
+  thead.sortable .sort-header.sortable-column .icon {
+    opacity: 0.5;
+  }
+
+  thead.sortable .sort-header.sortable-column:hover .icon {
+    opacity: 1;
+  }
+
+  // Table body
+  tbody tr:last-child td:last-child {
     border-bottom-right-radius: var(--generic-subtle_border_radius);
   }
 
-  &.sticky-header > thead {
-    position: sticky;
-    top: var(--table-sticky-header_offset, var(--page-header_height));
+  tbody tr th,
+  tbody tr td {
+    border-bottom: 1px solid var(--table-row_color_border);
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  // Table footer
+  tfoot {
+    border-top: 1px solid var(--table-header_color_background);
+    background-color: var(--table-footer_color_background);
+  }
+
+  // Column styles
+  td.right-aligned,
+  td.currency {
+    text-align: right;
+  }
+
+  td.center-aligned {
+    text-align: center;
   }
 }

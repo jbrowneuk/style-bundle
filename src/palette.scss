@@ -88,9 +88,16 @@ $color-names: (
   'progress-bar_color_background-full': ($light: 'primary-blue-2', $dark: 'primary-blue-4'),
 
   'table_color_background': ($light: 'neutral-1', $dark: 'neutral-1'),
-  'table_color_background-alt': ($light: 'neutral-2', $dark: 'neutral-2'),
-  'table_color_background-title': ($light: 'primary-blue-3', $dark: 'primary-blue-4'),
-  'table_color_foreground-title': ($light: 'neutral-1', $dark: 'neutral-10'),
+
+  'table-row_color_border': ($light: 'neutral-3', $dark: 'neutral-3'),
+
+  'table-header_color_background': ($light: 'primary-blue-3', $dark: 'primary-blue-4'),
+  'table-header_color_foreground': ($light: 'neutral-1', $dark: 'neutral-10'),
+
+  'table-sortable-header_color_background': ($light: 'primary-blue-4', $dark: 'primary-blue-3'),
+  'table-sortable-header_color_inset-shadow': ($light: 'primary-blue-3', $dark: 'primary-blue-4'),
+
+  'table-footer_color_background': ($light: 'neutral-2', $dark: 'neutral-2'),
 
   'selection_color_background': ($light: 'primary-blue-5', $dark: 'primary-blue-4'),
   'selection_color_foreground': ($light: 'neutral-1', $dark: 'neutral-1'),
